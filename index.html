@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VICALOBIZ | Style Meets Smart</title>
+
+<meta name="description" content="VICALOBIZ — premium fashion and smart phone accessories in Warri, Delta State, Nigeria.">
+<meta name="theme-color" content="#070707">
+
+<style>
+:root{
+  --gold:#d7ad45;
+  --gold2:#f2d37a;
+  --black:#070707;
+  --dark:#0d0d0d;
+  --card:#141414;
+  --border:#292929;
+  --text:#f7f3e8;
+  --muted:#aaa69d;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--black);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* NAVIGATION */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(7,7,7,.95);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #242424;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 6%;
+}
+
+.logo-text{
+  font-family:Georgia,serif;
+  font-size:25px;
+  font-weight:bold;
+  letter-spacing:2px;
+  color:var(--gold2);
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+  font-size:14px;
+}
+
+.nav-links a{
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:var(--gold2);
+}
+
+.menu-btn{
+  display:none;
+  font-size:25px;
+  color:var(--gold2);
+  cursor:pointer;
+}
+
+/* BUTTONS */
+
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:5px;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#090909;
+  font-weight:800;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 25px rgba(215,173,69,.25);
+}
+
+.btn.outline{
+  background:transparent;
+  color:var(--gold2);
+  border:1px solid var(--gold);
+}
+
+/* HERO */
+
+.hero{
+  min-height:82vh;
+  display:flex;
+  align-items:center;
+  padding:70px 6%;
+  background:
+    radial-gradient(circle at 80% 35%,#3b2b0e 0,#111 28%,#070707 62%);
+}
+
+.hero-grid{
+  max-width:1200px;
+  margin:auto;
+  width:100%;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
+  align-items:center;
+}
+
+.kicker{
+  color:var(--gold2);
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+h1{
+  font-family:Georgia,serif;
+  font-size:clamp(3rem,7vw,6.2rem);
+  line-height:.98;
+  margin-bottom:25px;
+}
+
+.gold{
+  color:var(--gold2);
+}
+
+.hero p{
+  max-width:650px;
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:32px;
+}
+
+.actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.hero-card{
+  width:min(440px,85vw);
+  height:440px;
+  margin:auto;
+  border:1px solid #4a3a1b;
+  border-radius:25px;
+  background:
+    radial-gradient(circle at center,#3c2d11,#15120c 45%,#090909 75%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 25px 70px rgba(0,0,0,.6);
+}
+
+.hero-brand{
+  text-align:center;
+}
+
+.hero-brand h2{
+  font-family:Georgia,serif;
+  font-size:55px;
+  letter-spacing:5px;
+  color:var(--gold2);
+}
+
+.hero-brand p{
+  font-size:14px;
+  letter-spacing:5px;
+  color:#ddd2b7;
+  margin:5px 0 0;
+}
+
+/* GENERAL SECTIONS */
+
+.section{
+  padding:90px 6%;
+  max-width:1250px;
+  margin:auto;
+}
+
+.center{
+  text-align:center;
+}
+
+.section h2{
+  font-family:Georgia,serif;
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.sub{
+  color:var(--muted);
+  max-width:650px;
+  margin:0 auto 45px;
+}
+
+/* SERVICES */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:linear-gradient(145deg,#151515,#0d0d0d);
+  border:1px solid var(--border);
+  padding:30px;
+  border-radius:14px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#6e5721;
+}
+
+.icon{
+  font-size:32px;
+  color:var(--gold2);
+  margin-bottom:15px;
+}
+
+.card h3{
+  font-family:Georgia,serif;
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+/* SHOP */
+
+.shop{
+  background:#0d0d0d;
+  border-top:1px solid #202020;
+  border-bottom:1px solid #202020;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.product{
+  background:#141414;
+  border:1px solid #262626;
+  border-radius:12px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.product:hover{
+  transform:translateY(-5px);
+  border-color:#6e5721;
+}
+
+.product-img{
+  height:270px;
+  background:
+    radial-gradient(circle,#333,#111 65%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.product-img span{
+  font-size:70px;
+}
+
+.product-body{
+  padding:18px;
+}
+
+.product-body h3{
+  margin-bottom:5px;
+  font-size:17px;
+}
+
+.category{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.price{
+  color:var(--gold2);
+  font-weight:800;
+  font-size:18px;
+  margin:7px 0 14px;
+}
+
+.small-btn{
+  display:inline-block;
+  border:1px solid #6e5721;
+  color:var(--gold2);
+  padding:9px 13px;
+  border-radius:4px;
+  font-size:13px;
+  transition:.3s;
+}
+
+.small-btn:hover{
+  background:var(--gold);
+  color:#090909;
+}
+
+/* ABOUT */
+
+.about{
+  background:#090909;
+}
+
+.about-box{
+  max-width:900px;
+  margin:auto;
+  border-left:2px solid var(--gold);
+  padding:10px 0 10px 30px;
+}
+
+.about-box p{
+  color:var(--muted);
+  font-size:17px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:linear-gradient(135deg,#17120a,#090909);
+}
+
+.contact-box{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  border:1px solid #3b3019;
+  border-radius:18px;
+  padding:50px 25px;
+}
+
+.contact-details{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  color:var(--muted);
+  margin:25px 0 30px;
+}
+
+.contact-details strong{
+  color:var(--gold2);
+  display:block;
+}
+
+/* SOCIALS */
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+
+.socials a{
+  border:1px solid #4b3b18;
+  color:var(--gold2);
+  padding:8px 13px;
+  border-radius:4px;
+  font-size:13px;
+  transition:.3s;
+}
+
+.socials a:hover{
+  background:var(--gold);
+  color:#090909;
+}
+
+/* FOOTER */
+
+footer{
+  padding:30px 6%;
+  border-top:1px solid #222;
+  text-align:center;
+  color:#8f8b82;
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#090909;
+    padding:25px;
+    flex-direction:column;
+    text-align:center;
+    border-bottom:1px solid #252525;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero{
+    padding-top:55px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .actions{
+    justify-content:center;
+  }
+
+  .hero-card{
+    width:min(330px,80vw);
+    height:330px;
+  }
+
+  .hero-brand h2{
+    font-size:40px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:500px){
+
+  .section{
+    padding:65px 5%;
+  }
+
+  .section h2{
+    font-size:34px;
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .hero-brand h2{
+    font-size:34px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="nav">
+
+  <a href="#home" class="logo-text">
+    VICALOBIZ
+  </a>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="hero-grid">
+
+    <div>
+
+      <div class="kicker">
+        Premium Lifestyle Store
+      </div>
+
+      <h1>
+        Style <span class="gold">Meets</span> Smart.
+      </h1>
+
+      <p>
+        Welcome to VICALOBIZ — your destination for stylish fashion,
+        quality men's and women's clothing, and smart phone accessories.
+        Discover products designed to match your lifestyle.
+      </p>
+
+      <div class="actions">
+        <a href="#shop" class="btn">
+          Shop Now
+        </a>
+
+        <a href="#contact" class="btn outline">
+          Contact Us
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <div class="hero-brand">
+
+        <h2>
+          VICALOBIZ
+        </h2>
+
+        <p>
+          STYLE • QUALITY • SMART
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+
+  <div class="center">
+
+    <div class="kicker">
+      What We Offer
+    </div>
+
+    <h2>
+      Shop With Confidence
+    </h2>
+
+    <p class="sub">
+      We combine fashion, convenience and smart accessories
+      to give you a complete modern shopping experience.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon">✦</div>
+
+      <h3>
+        Fashion
+      </h3>
+
+      <p>
+        Modern men's and women's clothing selected for style,
+        comfort and everyday confidence.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">◈</div>
+
+      <h3>
+        Smart Accessories
+      </h3>
+
+      <p>
+        Useful phone and lifestyle accessories that complement
+        your everyday digital experience.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">◆</div>
+
+      <h3>
+        Quality Service
+      </h3>
+
+      <p>
+        We focus on good products, responsive communication
+        and a smooth customer experience.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section class="shop" id="shop">
+
+  <div class="section">
+
+    <div class="center">
+
+      <div class="kicker">
+        Featured Collection
+      </div>
+
+      <h2>
+        Shop VICALOBIZ
+      </h2>
+
+      <p class="sub">
+        Explore some of our featured products.
+        More products will be added regularly.
+      </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+      <!-- PRODUCT 1 -->
+
+      <div class="product">
+
+        <div class="product-img">
+          <span>👕</span>
+        </div>
+
+        <div class="product-body">
+
+          <h3>
+            Men's 2-in-1 Outfit
+          </h3>
+
+          <div class="category">
+            Men's Fashion
+          </div>
+
+          <div class="price">
+            ₦20,000
+          </div>
+
+          <a
+            class="small-btn"
+            href="https://wa.me/2340000000000?text=Hello%20VICALOBIZ,%20I%20am%20interested%20in%20the%20Men's%202-in-1%20Outfit."
+            target="_blank">
+            Order on WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 2 -->
+
+      <div class="product">
+
+        <div class="product-img">
+          <span>👗</span>
+        </div>
+
+        <div class="product-body">
+
+          <h3>
+            Women's Fashion
+          </h3>
+
+          <div class="category">
+            Women's Collection
+          </div>
+
+          <div class="price">
+            Coming Soon
+          </div>
+
+          <a
+            class="small-btn"
+            href="#contact">
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 3 -->
+
+      <div class="product">
+
+        <div class="product-img">
+          <span>📱</span>
+        </div>
+
+        <div class="product-body">
+
+          <h3>
+            Phone Accessories
+          </h3>
+
+          <div class="category">
+            Smart Accessories
+          </div>
+
+          <div class="price">
+            Coming Soon
+          </div>
+
+          <a
+            class="small-btn"
+            href="#contact">
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 4 -->
+
+      <div class="product">
+
+        <div class="product-img">
+          <span>🎧</span>
+        </div>
+
+        <div class="product-body">
+
+          <h3>
+            Audio Accessories
+          </h3>
+
+          <div class="category">
+            Lifestyle Tech
+          </div>
+
+          <div class="price">
+            Coming Soon
+          </div>
+
+          <a
+            class="small-btn"
+            href="#contact">
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="section">
+
+    <div class="center">
+
+      <div class="kicker">
+        About VICALOBIZ
+      </div>
+
+      <h2>
+        Built Around Your Style
+      </h2>
+
+    </div>
+
+    <div class="about-box">
+
+      <p>
+        VICALOBIZ is a modern lifestyle brand focused on fashion,
+        smart accessories and quality products. Our goal is simple:
+        provide stylish and useful products while giving customers
+        a professional and convenient shopping experience.
+      </p>
+
+      <br>
+
+      <p>
+        Based in Warri, Delta State, Nigeria, VICALOBIZ is growing
+        with a vision to become a trusted destination for fashion
+        and lifestyle products.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <div class="section">
+
+    <div class="contact-box">
+
+      <div class="kicker">
+        Get In Touch
+      </div>
+
+      <h2>
+        Let's Talk
+      </h2>
+
+      <p class="sub">
+        Interested in a product, placing an order, or making an
+        enquiry? Contact VICALOBIZ today.
+      </p>
+
+
+      <div class="contact-details">
+
+        <div>
+          <strong>Location</strong>
+          Warri, Delta State, Nigeria
+        </div>
+
+        <div>
+          <strong>Business</strong>
+          Fashion & Smart Accessories
+        </div>
+
+      </div>
+
+
+      <a
+        class="btn"
+        href="https://wa.me/2340000000000"
+        target="_blank">
+        Chat on WhatsApp
+      </a>
+
+
+      <div class="socials">
+
+        <a
+          href="https://instagram.com/victor.perebo"
+          target="_blank">
+          Instagram
+        </a>
+
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank">
+          TikTok
+        </a>
+
+        <a
+          href="https://www.facebook.com/"
+          target="_blank">
+          Facebook
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  © <span id="year"></span> VICALOBIZ.
+  All Rights Reserved.
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function toggleMenu(){
+
+  document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+      document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+  });
+
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
